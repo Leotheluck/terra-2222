@@ -25,8 +25,21 @@ a.play{
   font-size:16px;
   
 }
-
-
+div.sound{
+  padding:30px 0px 0px 30px;
+}
+i{
+  color:#F7F1E3;
+}
+i.fa-volume-mute{
+  display:none;
+}
+i.fa-volume-up{
+  display:block;
+}
+i:hover{
+  cursor: pointer;
+}
 
 
 
