@@ -2,14 +2,14 @@ body{
     margin: 0;
     overflow-x: hidden;
 }
-.container{
+.container{ 
   width:100vw;
   height:100vh;
   font-family: 'Gugi', sans-serif;
-  z-index:0;
+  z-index:0;/*Put it in background*/
 }
 .btns{
-  z-index:1;
+  z-index:1; /*it hovers the container so it doesn't disturb it*/
   width:960px;
   margin:0 auto;
   padding-top:300px;
@@ -25,38 +25,21 @@ a.play{
   font-size:16px;
   
 }
-div.sound{
+div.sound{ /*the div that contains the sound <i> buttons*/
   padding:30px 0px 0px 30px;
 }
-i{
+.fas{
   color:#F7F1E3;
 }
-i.fa-volume-mute{
+i.fa-volume-mute{/*mute button is hidden*/
   display:none;
 }
-i.fa-volume-up{
+i.fa-volume-up{ /*Volume up button is shown*/
   display:block;
 }
-i:hover{
+.fas:hover{ /*hover for the sound button*/
   cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*ARROW SECTION*/
 .arrow-container {
   display: block;
@@ -79,7 +62,6 @@ i:hover{
 .arrow-container:hover .arrow:after {
   transform: translate(-50%, -50%) rotateZ(30deg);
 }
-
 .arrow {
   position: absolute;
   left: 50%;
