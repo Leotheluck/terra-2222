@@ -5,9 +5,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Intensive game JS</title>
       <link rel="stylesheet" href="./style/master.css">
+      <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Gugi&display=swap" rel="stylesheet">
       <script src="script/three.r95.min.js"></script>
       <script src="script/vanta.clouds.min.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Gugi&display=swap" rel="stylesheet">
+      <link rel="icon" href="./images/ship.png" />
       <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   </head>
   <body>
@@ -18,16 +20,44 @@
         <i class='fas fa-volume-mute' style='font-size:24px'></i>
       </div>
       <div class="btns"><!--Button and title container-->
-        <h1 class="mainTitle">TERRA 2222</h1>
+        <h1 class="mainTitle">TERRA2222</h1>
         <a href="#" class="play"> - Play - </a>
       </div>
     </div>
       <!--arrow container-->
-      <a href="#" class="arrow-container" title="discover our team">
+      <a href="#lorePartAnchor" class="arrowContainer" title="See more">
         <div class="arrow"></div>
         <div class="arrow"></div>
         <div class="arrow"></div></a>
-    
+      
+      <!-- separator -->
+      <div class="separator"></div>
+
+      <!-- lore presentation part -->
+      <div class="lorePart" id="lorePartAnchor">
+        <div class="characterPickerBackground">
+          <div class="characterPicker">
+            <img src="./images/moving_circle.png" alt="Moving circle" class="movingCircle">
+            <img src="./images/allPilots.png" alt="Pilote" class="pilot">
+          </div>
+          <div class="characterSelector">
+            <img src="./images/pilot1Minia.png" alt="Choix pilote 1" class="pilotPreview1">
+            <img src="./images/pilot2Minia.png" alt="Choix pilote 2" class="pilotPreview2">
+            <img src="./images/pilot3Minia.png" alt="Choix pilote 3" class="pilotPreview3">
+          </div>
+          <p class="synopsis">
+            - Synopsis -
+          </p>
+        </div>
+        <div class="characterStory">
+          <h2 class="loreTitle">TERRA 2222 : <em>Le destin de l'humanité est entre vos mains</em></h2>
+          <p class="loreText">
+            An 2222. L’humanité est parvenue à prendre le contrôle de la galaxie, où l’ordre est maintenu par le CIPTET (Conseil Interplanétaire des Peuples Terrestres et Extra-Terrestres). La paix règne depuis plus d’un siècle maintenant ; seulement, le Conseil a décidé de vous contacter, jeune pilote de vaisseau prodige, pour vous charger d’une mission secrète des plus importantes. Un peuple extra-terrestre dissident, les Zblorgs, a décidé de se rebeller, tentant au passage d’en rallier d’autres à sa cause. Pour empêcher cela, vous devrez vous aventurer en territoire ennemi... L’avenir de l’humanité est donc entre vos mains : sans vous, c’est la paix intergalactique qui est remise en cause… Alors, enclenchez vos réacteurs supersoniques, activez vos canons lasers et préparez vous à affronter astéroïdes, vaisseaux spatiaux ennemis et bien pire !
+          </p>
+        </div>
+      </div>
+  
+      <script src="scripts/script.js"></script>
 
    <!--Vanta JS script-->
     <script>
