@@ -165,7 +165,8 @@ i.fa-volume-up{ /*Volume up button is shown*/
 .lorePart .characterPickerBackground .pilot{
   height: 600px;
   position: absolute;
-  left: 35%;
+  left: auto;
+  right: auto;
 }
 
 /* Lore part character picker selectors */
