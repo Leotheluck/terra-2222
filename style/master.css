@@ -10,20 +10,28 @@ body{
 }
 .btns{
   z-index:1; /*it hovers the container so it doesn't disturb it*/
-  width:960px;
+  width:100vw;
   margin:0 auto;
-  padding-top:300px;
   text-align: center;
 }
 .mainTitle{
   color:#F7F1E3;
+  font-size: 54px;
+  letter-spacing: 10px;
   margin:0;
+  padding-top:210px;
+  padding-bottom:80px;
 }
-a.play{
+.play{
+  z-index:2;
   text-decoration: none;
   color:#F7F1E3;
-  font-size:16px;
-  
+  font-size:24px;
+  padding-bottom:3px;
+  transition:0.1s
+}
+.play:hover{
+  border-bottom: 2px solid #F7F1E3;
 }
 div.sound{ /*the div that contains the sound <i> buttons*/
   padding:30px 0px 0px 30px;
@@ -96,3 +104,4 @@ i.fa-volume-up{ /*Volume up button is shown*/
   top: 75%;
 }
 /*END OF ARROW SECTION*/
+
