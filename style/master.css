@@ -131,7 +131,7 @@ i.fa-volume-up{ /*Volume up button is shown*/
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 24px;
   color: #F7F1E3;
-  height: 100vh;
+  height: 100%;
 }
 
 /* Lore part character picker */
