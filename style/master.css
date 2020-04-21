@@ -229,3 +229,89 @@ i.fa-volume-up{ /*Volume up button is shown*/
 
 }
 
+/* contributors part images and text */
+
+.contributorPart
+{
+  display: flex;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  color: #F7F1E3;
+  background: url(../images/bg_contri.jpg);
+  background-size: cover;
+  padding-top: 50px;
+  margin-top: 0;
+  justify-content: center;
+  flex-direction: row;
+}
+
+/* circle */
+
+.profileImg
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 160px;
+    height: 160px;
+}
+
+.contribuCircle
+{
+    margin: 0 auto;
+    width: 160px;
+    height: 160px;
+}
+
+.contributImg
+{
+    position: absolute;
+    left: auto;
+    right: auto;
+    width: 120px;
+    height: 120px;
+    transition: transform .2s;
+    border-radius: 50%;
+}
+
+.contributors
+{
+    width: 16%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.contributors:hover .contribuCircle{
+  animation: rotate 8s linear infinite;
+}
+
+/* text */
+
+.name
+{
+    display: flex;
+    margin-top: 20px;
+    width: 160px;
+    font-size: 32px;
+    transition: transform .2s;
+    text-align: center;
+    justify-content: center;
+}
+
+.textUs
+{
+    display: flex;
+    margin-top: 10px;
+    width: 160px;
+    transition: transform .2s;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* hover */
+
+.contributImg:hover, .name:hover, .textUs:hover
+{
+    transform: scale(1.02);
+}
