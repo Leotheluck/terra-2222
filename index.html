@@ -1,15 +1,46 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intensive game JS</title>
-    <link rel="stylesheet" href="./style/master.css">
-</head>
-<body>
-    <h1>simple title</h1>
-    <canvas class="main-canvas"></canvas>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Intensive game JS</title>
+      <link rel="stylesheet" href="./style/master.css">
+      <script src="script/three.r95.min.js"></script>
+      <script src="script/vanta.clouds.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Gugi&display=swap" rel="stylesheet">
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.2.1/pixi.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.2.1/pixi.min.js.map"></script> -->
+  </head>
+  <body>
+    
+    <div id="container" class="container">
+      <div class="btns">
+        <h1 class="mainTitle">TERRA 2222</h1>
+        <a href="#" class="play">Play</a>
+      </div>  
+      <a href="#" class="arrow-container">
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+        <div class="arrow"></div></a>
 
+    </div>
+   
+    <script>
+      VANTA.CLOUDS({
+        el: ".container",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        skyColor: 0x202b6f,
+        cloudColor: 0x7d669a,
+        cloudShadowColor: 0x393674,
+        sunColor: 0x5c4c7c,
+        sunGlareColor: 0xc711aa,
+        sunlightColor: 0xb0d95,
+        speed: 0.40
+      })
+      </script>
     <script src="./script/main.js"></script>
-</body>
+  </body>
 </html>
