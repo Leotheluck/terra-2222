@@ -231,8 +231,7 @@ i.fa-volume-up{ /*Volume up button is shown*/
 
 /* contributors part images and text */
 
-.contributorPart
-{
+.contributorPart{
   display: flex;
   font-family: 'Fira Sans Condensed', sans-serif;
   color: #F7F1E3;
@@ -246,8 +245,7 @@ i.fa-volume-up{ /*Volume up button is shown*/
 
 /* circle */
 
-.profileImg
-{
+.profileImg{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -256,15 +254,13 @@ i.fa-volume-up{ /*Volume up button is shown*/
     height: 160px;
 }
 
-.contribuCircle
-{
+.contribuCircle{
     margin: 0 auto;
     width: 160px;
     height: 160px;
 }
 
-.contributImg
-{
+.contributImg{
     position: absolute;
     left: auto;
     right: auto;
@@ -274,8 +270,7 @@ i.fa-volume-up{ /*Volume up button is shown*/
     border-radius: 50%;
 }
 
-.contributors
-{
+.contributors{
     width: 16%;
     justify-content: center;
     align-items: center;
@@ -288,8 +283,7 @@ i.fa-volume-up{ /*Volume up button is shown*/
 
 /* text */
 
-.name
-{
+.name{
     display: flex;
     margin-top: 20px;
     width: 160px;
@@ -299,8 +293,7 @@ i.fa-volume-up{ /*Volume up button is shown*/
     justify-content: center;
 }
 
-.textUs
-{
+.textUs{
     display: flex;
     margin-top: 10px;
     width: 160px;
@@ -311,7 +304,95 @@ i.fa-volume-up{ /*Volume up button is shown*/
 
 /* hover */
 
-.contributImg:hover, .name:hover, .textUs:hover
-{
+.contributImg:hover, .name:hover, .textUs:hover{
     transform: scale(1.02);
+}
+/*LOADER SECTION */
+/*this section is freely inspired from the codePen : https://codepen.io/GeoxCodes/pen/PBoQZa*/
+svg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+          transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  z-index: 3;
+}
+
+.stroke-still {
+  stroke: #232323;
+}
+
+.stroke-animation {
+  -webkit-animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+          animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+@-webkit-keyframes stroke-spacing {
+  0% {
+    stroke-dasharray: 0 200;
+  }
+  45% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 200 200;
+  }
+  90% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+  100% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+}
+
+@keyframes stroke-spacing {
+  0% {
+    stroke-dasharray: 0 200;
+  }
+  45% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 200 200;
+  }
+  90% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+  100% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+}
+
+@-webkit-keyframes stroke-color {
+  0%  { stroke: #3498DB; }
+  24% { stroke: #643232; }
+  25% { stroke: #327864; }
+  49% { stroke: #327864; }
+  50% { stroke: #32326e; }
+  74% { stroke: #32326e; }
+  75% { stroke: #78325a; }
+  99% { stroke: #78325a; }
+}
+
+@keyframes stroke-color {
+  0%  { stroke: #3498DB; }
+  24% { stroke: #643232; }
+  25% { stroke: #327864; }
+  49% { stroke: #327864; }
+  50% { stroke: #32326e; }
+  74% { stroke: #32326e; }
+  75% { stroke: #78325a; }
+  99% { stroke: #78325a; }
 }

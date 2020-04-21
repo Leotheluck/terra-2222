@@ -53,3 +53,4 @@ resetloreText.addEventListener('click', () =>
     loreText.textContent = `An 2222. L’humanité est parvenue à prendre le contrôle de la galaxie, où l’ordre est maintenu par le CIPTET (Conseil Interplanétaire des Peuples Terrestres et Extra-Terrestres). La paix règne depuis plus d’un siècle maintenant ; seulement, le Conseil a décidé de vous contacter, jeune pilote de vaisseau prodige, pour vous charger d’une mission secrète des plus importantes. Un peuple extra-terrestre dissident, les Zblorgs, a décidé de se rebeller, tentant au passage d’en rallier d’autres à sa cause. Pour empêcher cela, vous devrez vous aventurer en territoire ennemi... L’avenir de l’humanité est donc entre vos mains : sans vous, c’est la paix intergalactique qui est remise en cause… Alors, enclenchez vos réacteurs supersoniques, activez vos canons lasers et préparez vous à affronter astéroïdes, vaisseaux spatiaux ennemis et bien pire !`
 })
 
+// loader section
