@@ -40,10 +40,10 @@ div.sound{ /*the div that contains the sound <i> buttons*/
   color:#F7F1E3;
 }
 i.fa-volume-mute{/*mute button is hidden*/
-  display:none;
+  display:block;
 }
 i.fa-volume-up{ /*Volume up button is shown*/
-  display:block;
+  display:none;
 }
 .fas:hover{ /*hover for the sound button*/
   cursor: pointer;
