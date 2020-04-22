@@ -49,6 +49,7 @@ div.sound{ /*the div that contains the sound <i> buttons*/
 }
 .fas{
   color:#F7F1E3;
+  position:fixed;
 }
 i.fa-volume-mute{/*mute button is hidden*/
   display:block;

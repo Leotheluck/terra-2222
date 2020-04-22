@@ -10,7 +10,7 @@
       <script src="script/vanta.clouds.min.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Gugi&display=swap" rel="stylesheet">
       <link rel="icon" href="./images/ship.png" />
-      <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body onload="timingSetter()">
     <div class="loader">
@@ -24,8 +24,8 @@
     <div class="toBeShown" style="visibility: hidden;">
       <div id="container" class="container"><!-- Main Container-->
         <div class="sound"> <!--Sound container-->
-          <i class='fas fa-volume-up' style='font-size:24px'></i>
-          <i class='fas fa-volume-mute' style='font-size:24px'></i>
+          <i class="fas material-icons fa-volume-up " style="font-size:24px">volume_up</i>
+          <i class="fas material-icons fa-volume-mute" style="font-size:24px">volume_off</i>
         </div>
         <div class="btns"><!--Button and title container-->
           <h1 class="mainTitle">TERRA2222</h1>
@@ -142,7 +142,7 @@
       let timerZ;
 
       function timingSetter() {
-        timerZ = setTimeout(pageReveal, 3000);
+        timerZ = setTimeout(pageReveal, 5000);
       }
 
       function pageReveal() {
