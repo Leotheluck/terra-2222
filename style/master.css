@@ -214,14 +214,14 @@ i.fa-volume-up{ /*Volume up button is shown*/
   background: #1E272Eb2;
 }
 
-.lorePart .characterStory h2{
+.lorePart .characterStory h3{
   width: 80%;
   font-family: 'Gugi', cursive;
   font-size: 32px;
   padding-bottom: 24px;
 }
 
-.lorePart .characterStory h2 em{
+.lorePart .characterStory h3 em{
   font-family: 'Fira Sans Condensed', sans-serif;
 }
 
@@ -234,15 +234,32 @@ i.fa-volume-up{ /*Volume up button is shown*/
 
 .contributorPart{
   display: flex;
+  justify-content: center;
+  flex-direction: column;
   font-family: 'Fira Sans Condensed', sans-serif;
   color: #F7F1E3;
   background: url(../images/bg_contri.jpg);
   background-size: cover;
-  padding-top: 50px;
   margin-top: 0;
+  height: 100vh;
+}
+
+.contributorPart h2{
+  font-family: 'Gugi', cursive;
+  font-size: 64px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  padding-bottom: 15vh;
+  text-align: center;
+}
+
+.contributorsProfiles{
+  display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
 }
+
 
 /* circle */
 
@@ -272,10 +289,13 @@ i.fa-volume-up{ /*Volume up button is shown*/
 }
 
 .contributors{
+    display: flex;
+    flex-direction: column;
     width: 16%;
     justify-content: center;
     align-items: center;
     margin: 0 5px;
+    /* padding-top: 20vh; */
 }
 
 .contributors:hover .contribuCircle{
@@ -308,6 +328,7 @@ i.fa-volume-up{ /*Volume up button is shown*/
 .contributImg:hover, .name:hover, .textUs:hover{
     transform: scale(1.02);
 }
+
 /*LOADER SECTION */
 /*this section is freely inspired from the codePen : https://codepen.io/GeoxCodes/pen/PBoQZa*/
 svg {
@@ -396,4 +417,70 @@ svg {
   74% { stroke: #1e272e; }
   75% { stroke: #c711aa; }
   99% { stroke: #c711aa; }
+}
+
+/* FOOTER */
+
+footer{
+  background: #1E272E;
+  color: #F7F1E3;
+}
+
+footer a{
+  color: #F7F1E3;
+  text-decoration: none;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 16px;
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+footer .footer1stLine{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+footer img{
+  width: 400px;
+}
+
+footer ul{
+  list-style: none;
+  padding: 0px;
+}
+
+footer li{
+  display: flex;
+  align-items: center;
+  margin: 16px;
+
+}
+
+footer .infos{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+footer .icons{
+  width: 24px;
+  padding-right: 16px;
+}
+
+footer .backquotestudiosLogo{
+  display: flex;
+  align-items: center;
+}
+
+footer .footer2ndLine{
+  color: #F7F1E3;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
 }
