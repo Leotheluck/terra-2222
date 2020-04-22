@@ -1,3 +1,6 @@
+*{
+  margin: 0;
+}
 html{
   scroll-behavior: smooth;
 }
@@ -26,23 +29,37 @@ body{
 }
 .mainTitle{
   color:#F7F1E3;
-  font-size: 54px;
+  font-size: 46px;
   letter-spacing: 10px;
   margin:0;
   padding-top:210px;
   padding-bottom:80px;
 }
+div.linkWrapper{
+  width: 10vw;
+  margin:0 auto;
+  border:1.5px solid #F7F1E3;
+  background-color:#F7F1E319;
+  transition:0.3s
+}
+div.linkWrapper:hover{
+  border: 0.5px solid #F7F1E319;
+  background-color:#F7F1E366;
+  cursor:pointer;
+}
 .play{
   z-index:2;
+  width:10vw;
+  padding:0px 35px;
+  margin:0 auto;
   text-decoration: none;
   color:#F7F1E3;
-  font-size:24px;
+  font-size:32px;
   padding-bottom:3px;
-  transition:0.1s
+  transition:1s;
 }
-.play:hover{
-  border-bottom: 2px solid #F7F1E3;
-}
+
+
 div.sound{ /*the div that contains the sound <i> buttons*/
   padding:30px 0px 0px 30px;
   position: fixed;
@@ -67,7 +84,7 @@ i.fa-volume-up{ /*Volume up button is shown*/
   height: 100px;
   position: absolute;
   top: 90%;
-  left: 50%;
+  left: 50.7%;
   transform: translate(-50%, -50%) rotateZ(0deg);
 }
 .arrowContainer:hover {
@@ -118,10 +135,6 @@ i.fa-volume-up{ /*Volume up button is shown*/
 /*END OF ARROW SECTION*/
 
 /*** LORE PRESENTATION SECTION ***/
-
-*{
-  margin: 0;
-}
 
 /* LORE PART BACKGROUND AND GENERAL SETTINGS */
 

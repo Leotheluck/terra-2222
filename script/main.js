@@ -1,3 +1,7 @@
+window.onload = function pageReveal() {
+    document.querySelector('.loader').style.visibility = "hidden";
+    document.querySelector('.toBeShown').style.visibility = "visible";
+}
 const soundButtonOn = document.querySelector('.fa-volume-up') // the variable that contains the fa volume up <i>
 const soundButtonOff = document.querySelector('.fa-volume-mute') // the variable that contains the fa volume mute <i>
 const audio = new Audio('musics/song1.mp3')
@@ -58,7 +62,3 @@ resetloreText.addEventListener('click', () =>
 // function timingSetter() {
 //     timerZ = setTimeout(pageReveal, 10000);
 // }
-window.onload = function pageReveal() {
-    document.querySelector('.loader').style.visibility = "hidden";
-    document.querySelector('.toBeShown').style.visibility = "visible";
-}
