@@ -51,6 +51,9 @@ div.linkWrapper:hover{
   background-color:#F7F1E366;
   cursor:pointer;
 }
+div.linkWrapper:active{
+  opacity:0.7;
+}
 .play{
   z-index:2;
   width:10vw;
