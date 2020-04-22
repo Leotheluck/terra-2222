@@ -1,7 +1,6 @@
 html{
   scroll-behavior: smooth;
 }
-
 body{
     margin: 0;
     overflow-x: hidden;
@@ -316,7 +315,7 @@ svg {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
-          transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  transform: translate(-50%, -50%) rotate(45deg) scale(1);
   z-index: 3;
 }
 
@@ -343,7 +342,7 @@ svg {
 
 @-webkit-keyframes stroke-spacing {
   0% {
-    stroke-dasharray: 0 200;
+    stroke-dasharray: 0 100;
   }
   45% {
     stroke-dashoffset: 0;
@@ -372,7 +371,7 @@ svg {
     stroke-dasharray: 200 200;
   }
   100% {
-    stroke-dashoffset: -200;
+    stroke-dashoffset: 200;
     stroke-dasharray: 200 200;
   }
 }
@@ -382,10 +381,10 @@ svg {
   24% { stroke: #643232; }
   25% { stroke: #327864; }
   49% { stroke: #327864; }
-  50% { stroke: #32326e; }
-  74% { stroke: #32326e; }
-  75% { stroke: #78325a; }
-  99% { stroke: #78325a; }
+  50% { stroke: #1e272e; }
+  74% { stroke: #1e272e; }
+  75% { stroke: #c711aa; }
+  99% { stroke: #c711aa; }
 }
 
 @keyframes stroke-color {
@@ -393,8 +392,8 @@ svg {
   24% { stroke: #643232; }
   25% { stroke: #327864; }
   49% { stroke: #327864; }
-  50% { stroke: #32326e; }
-  74% { stroke: #32326e; }
-  75% { stroke: #78325a; }
-  99% { stroke: #78325a; }
+  50% { stroke: #1e272e; }
+  74% { stroke: #1e272e; }
+  75% { stroke: #c711aa; }
+  99% { stroke: #c711aa; }
 }
