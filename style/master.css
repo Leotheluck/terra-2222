@@ -36,21 +36,25 @@ body{
   padding-bottom:80px;
 }
 div.linkWrapper{
-  width: 10vw;
+  display:flex;
+  align-items: center;
+  width: 12vw;
+  height:8vh;
   margin:0 auto;
   border:1.5px solid #F7F1E3;
   background-color:#F7F1E319;
-  transition:0.3s
+  transition:0.3s;
+  border-radius:20px;
 }
 div.linkWrapper:hover{
-  border: 0.5px solid #F7F1E319;
+  border: 1.5px solid #F7F1E3;
   background-color:#F7F1E366;
   cursor:pointer;
 }
 .play{
   z-index:2;
   width:10vw;
-  padding:0px 35px;
+  padding:5px 35px;
   margin:0 auto;
   text-decoration: none;
   color:#F7F1E3;
