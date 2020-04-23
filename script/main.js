@@ -1,33 +1,20 @@
 window.onload = function pageReveal() {
-    document.querySelector('.loader').style.visibility = "hidden";
-    document.querySelector('.toBeShown').style.visibility = "visible";
+    document.querySelector('.loader').style.visibility = 'hidden'
+    document.querySelector('.toBeShown').style.visibility = 'visible'
 }
 const soundButtonOn = document.querySelector('.fa-volume-up') // the variable that contains the fa volume up <i>
 const soundButtonOff = document.querySelector('.fa-volume-mute') // the variable that contains the fa volume mute <i>
 const audio = new Audio('musics/song1.mp3') //audio 
-// slider's arrow variables
-const arrowPrevious = document.querySelector('.arrowLeft')
-const arrowNext = document.querySelector('.arrowRight')
-const slides = document.querySelector('.slide')
-const s1 = document.querySelector('.s1')
-const s2 = document.querySelector('.s2')
-const s3 = document.querySelector('.s3')
-const s4 = document.querySelector('.s4')
-const s5 = document.querySelector('.s5')
-const s6 = document.querySelector('.s6')
-const s7 = document.querySelector('.s7')
-const s8 = document.querySelector('.s8')
-const s9 = document.querySelector('.s9')
-let slideArray = [s1,s2,s3,s4,s5,s6,s7,s8,s9]
+
 
 soundButtonOn.addEventListener('click', () => { // function to listen if the button is clicked
-    soundButtonOn.style.display = "none"
-    soundButtonOff.style.display ="block"
+    soundButtonOn.style.display = 'none'
+    soundButtonOff.style.display = 'block'
     audio.pause()
 })
 soundButtonOff.addEventListener('click', () =>{ // same but in the opposite way
-    soundButtonOff.style.display = "none"
-    soundButtonOn.style.display = "block"
+    soundButtonOff.style.display = 'none'
+    soundButtonOn.style.display = 'block'
     audio.play()
 })
 
@@ -72,15 +59,34 @@ resetloreText.addEventListener('click', () =>
     loreText.textContent = `An 2222. L’humanité est parvenue à prendre le contrôle de la galaxie, où l’ordre est maintenu par le CIPTET (Conseil Interplanétaire des Peuples Terrestres et Extra-Terrestres). La paix règne depuis plus d’un siècle maintenant ; seulement, le Conseil a décidé de vous contacter, jeune pilote de vaisseau prodige, pour vous charger d’une mission secrète des plus importantes. Un peuple extra-terrestre dissident, les Zblorgs, a décidé de se rebeller, tentant au passage d’en rallier d’autres à sa cause. Pour empêcher cela, vous devrez vous aventurer en territoire ennemi... L’avenir de l’humanité est donc entre vos mains : sans vous, c’est la paix intergalactique qui est remise en cause… Alors, enclenchez vos réacteurs supersoniques, activez vos canons lasers et préparez vous à affronter astéroïdes, vaisseaux spatiaux ennemis et bien pire !`
 })
 // Slider Section 
+          
+const arrowPrevious = document.querySelector('.arrowLeft')
+const arrowNext = document.querySelector('.arrowRight')
+const slides = document.querySelector('.slide')
+const s1 = document.querySelector('.s1')
+const s2 = document.querySelector('.s2')
+const s3 = document.querySelector('.s3')
+const s4 = document.querySelector('.s4')
+const s5 = document.querySelector('.s5')
+const s6 = document.querySelector('.s6')
+const s7 = document.querySelector('.s7')
+const s8 = document.querySelector('.s8')
+const s9 = document.querySelector('.s9')
+
 arrowPrevious.addEventListener('click', () => {
-    for(let i = 0; i < slideArray.length - 1; i++){
-        slideArray[i].style.display = "none"
-        slideArray[i-1].style.display = "block"
-    }
+    s1.style.display = 'block'
+    s2.style.display = 'block'
+    s3.style.display = 'block'
+    s7.style.display = "none" 
+    s8.style.display = "none" 
+    s9.style.display = "none"
+   
 })
 arrowNext.addEventListener('click', () => {
-    for(let j = 0; j < slideArray.length - 1; j++){
-        slideArray[j].style.display = "block"
-        slideArray[j+1].style.display = "none"
-    }
+   s7.style.display = "block" 
+   s8.style.display = "block" 
+   s9.style.display = "block" 
+   s1.style.display = 'none'
+   s2.style.display = 'none'
+   s3.style.display = 'none' 
 })

@@ -498,7 +498,7 @@ svg {
   font-family: Gugi, cursive;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 1vh;
+  margin-top: 15px;
   font-size: 50px;
 }
 
@@ -554,20 +554,30 @@ div.slideshow{
   display:flex;
   flex-direction: row;
   justify-content: center;
-  width: 57vw;
+  width: 57.5vw;
+  padding:0px 0px 10px 20px;
   height: 10vh;
   margin:0 auto;
   text-align: center;
-
 }
 div.slide{
   width:9vw;
-  padding-bottom:5px;
+  padding-bottom:15px;
 }
 div.slide{
   background-size: 90%;
   background-repeat: no-repeat;
-  
+}
+.slideText{
+  z-index:3;
+  display:none;
+  background: #1E272Eb2;
+  color: #F7F1E3;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  opacity: 0%;
+}
+.slideText:hover{
+  display: inline;
 }
 i.arrowSlide:hover{
   cursor:pointer;
@@ -608,8 +618,6 @@ div.s9{
   background-image:url('../images/mini_underglass.png');
   display:none;
 }
-
-
 /*FOOTER*/
 
 footer{
