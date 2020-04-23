@@ -504,3 +504,106 @@ footer .footer2ndLine{
   text-align: center;
   padding: 20px;
 }
+
+/* MERCHANDISING SECTION */
+
+.positionRelative{
+  position: relative;
+  width: fit-content;
+}
+
+.merchDescription{
+  position: absolute;
+  right: 8px;
+  bottom: 11px;
+  background: #1E272Eb2;
+  color: #F7F1E3;
+  padding: 10px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 100%;
+  opacity: 0%;
+  transition: ease 0.3s;
+}
+
+.merchDescription2{
+  position: absolute;
+  right: 2px;
+  bottom: 12px;
+  background: #1E272Eb2;
+  color: #F7F1E3;
+  padding: 10px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 100%;
+  opacity: 0%;
+  transition: ease 0.3s;
+}
+
+.merchDescription3{
+  position: absolute;
+  right: 8px;
+  bottom: 14px;
+  background: #1E272Eb2;
+  color: #F7F1E3;
+  padding: 10px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 100%;
+  opacity: 0%;
+  transition: ease 0.3s;
+}
+
+.positionRelative:hover .merchDescription{
+  opacity: 100%;
+}
+.positionRelative:hover .merchDescription2{
+  opacity: 100%;
+}
+.positionRelative:hover .merchDescription3{
+  opacity: 100%;
+}
+
+.merchPart1 h3{
+  font-family: Gugi, cursive;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 50px;
+}
+
+.merchPart1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(../images/merchBackground.jpg) 100%;
+}
+
+.merchPart1 img{
+  margin: 8px;
+}
+
+.largeMerch{
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
+.largeMerch img{
+  width: 49vw;
+}
+
+.mediumMerch{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10vh; /* à supprimer une fois le carroussel ajouté */
+}
+
+.mediumMerch img{
+  width: 24vw;
+}
+
+.merchPart1 .mediumMerch .mediumImgLeft{
+  margin-right: 0px;
+}
+
+.merchPart1 .mediumMerch .mediumImgRight{
+  margin-left: 1vw;
+}
