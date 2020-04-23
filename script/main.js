@@ -56,37 +56,7 @@ resetloreText.addEventListener('click', () =>
 {
     pilotImage.setAttribute('src', './images/allPilots.png')
     loreTitle.innerHTML = `TERRA 2222 : <em>Le destin de l'humanité est entre vos mains</em>`
-    loreText.textContent = `An 2222. L’humanité est parvenue à prendre le contrôle de la galaxie, où l’ordre est maintenu par le CIPTET (Conseil Interplanétaire des Peuples Terrestres et Extra-Terrestres). La paix règne depuis plus d’un siècle maintenant ; seulement, le Conseil a décidé de vous contacter, jeune pilote de vaisseau prodige, pour vous charger d’une mission secrète des plus importantes. Un peuple extra-terrestre dissident, les Zblorgs, a décidé de se rebeller, tentant au passage d’en rallier d’autres à sa cause. Pour empêcher cela, vous devrez vous aventurer en territoire ennemi... L’avenir de l’humanité est donc entre vos mains : sans vous, c’est la paix intergalactique qui est remise en cause… Alors, enclenchez vos réacteurs supersoniques, activez vos canons lasers et préparez vous à affronter astéroïdes, vaisseaux spatiaux ennemis et bien pire !`
+    loreText.textContent = `An 2222. L’humanité est parvenue à prendre le contrôle de la galaxie, où l’ordre est maintenu par le CIPTET (Conseil Interplanétaire des Peuples Terrestres et Extra-Terrestres). La paix règne depuis plus d’un siècle maintenant ; seulement, le Conseil a décidé de vous contacter, jeune pilote de vaisseau prodige, pour vous charger d’une mission secrète des plus importantes. Un peuple extra-terrestre dissident, les Zblorgs, a décidé de se rebeller, tentant au passage d’en rallier d’autres à sa cause. Pour empêcher cela, vous devrez vous aventurer en territoire ennemi... L’avenir de l’humanité est donc entre vos mains : sans vous, c’est la paix intergalactique qui est remise en cause… Alors, enclenchez vos réacteurs supersoniques, activez vos canons lasers et préparez vous à affronter vaisseaux spatiaux ennemis et bien pire !`
 })
 // Slider Section 
           
-const arrowPrevious = document.querySelector('.arrowLeft')
-const arrowNext = document.querySelector('.arrowRight')
-const slides = document.querySelector('.slide')
-const s1 = document.querySelector('.s1')
-const s2 = document.querySelector('.s2')
-const s3 = document.querySelector('.s3')
-const s4 = document.querySelector('.s4')
-const s5 = document.querySelector('.s5')
-const s6 = document.querySelector('.s6')
-const s7 = document.querySelector('.s7')
-const s8 = document.querySelector('.s8')
-const s9 = document.querySelector('.s9')
-
-arrowPrevious.addEventListener('click', () => {
-    s1.style.display = 'block'
-    s2.style.display = 'block'
-    s3.style.display = 'block'
-    s7.style.display = "none" 
-    s8.style.display = "none" 
-    s9.style.display = "none"
-   
-})
-arrowNext.addEventListener('click', () => {
-   s7.style.display = "block" 
-   s8.style.display = "block" 
-   s9.style.display = "block" 
-   s1.style.display = 'none'
-   s2.style.display = 'none'
-   s3.style.display = 'none' 
-})
