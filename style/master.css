@@ -338,6 +338,7 @@ i.fa-volume-up{ /*Volume up button is shown*/
     display: flex;
     margin-top: 10px;
     width: 160px;
+    height: 180px;
     transition: transform .2s;
     font-size: 16px;
     text-align: center;
