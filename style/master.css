@@ -554,7 +554,7 @@ div.slideshow{
   display:flex;
   flex-direction: row;
   justify-content: center;
-  width: 80vw;
+  width: 57vw;
   height: 10vh;
   margin:0 auto;
   text-align: center;
@@ -567,37 +567,46 @@ div.slide{
 div.slide{
   background-size: 90%;
   background-repeat: no-repeat;
-  background-color:#ffffff;
+  
 }
 i.arrowSlide:hover{
   cursor:pointer;
 }
 div.s1 {
   background-image: url("../images/mini_wallet.png");
+  display:none;
 }
 div.s2{
   background-image:url('../images/mini_artbook.png');
+  display:block;
 }
 div.s3{
   background-image:url('../images/mini_cap.png');
+  display:block;
 }
 div.s4{
   background-image:url('../images/mini_bag.png');
+  display:block;
 }
 div.s5{
   background-image:url('../images/mini_mousepad.png');
+  display:block;
 }
 div.s6{
   background-image:url('../images/mini_phonecase.png');
+  display:block;
 }
 div.s7{
   background-image:url('../images/mini_mug.png');
+  display:block;
 }
 div.s8{
   background-image:url('../images/mini_poster.png');
+  display:none;
 }
 div.s9{
   background-image:url('../images/mini_underglass.png');
+  display:none;
 }
 
 
