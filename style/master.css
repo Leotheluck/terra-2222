@@ -438,7 +438,62 @@ svg {
   75% { stroke: #c711aa; }
   99% { stroke: #c711aa; }
 }
+/*Slider container*/
+div.slidersContainer{
+  height: 100vh;
+  background-color:#F7F1E3;
+  width: 100vw;
+  margin:0 auto;
+  text-align: center;
+}
+div.bufferTest{/*to be removed, only for dev purposes*/
+  height:80vh;
+}
+div.slideshow{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80vw;
+  height: 10vh;
+  margin:0 auto;
+  text-align: center;
 
+}
+div.slide{
+  width:9vw;
+}
+div.slide{
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-color:#ffffff;
+}
+div.s1 {
+  background-image: url("../images/mini_wallet.png");
+}
+div.s2{
+  background-image:url('../images/mini_artbook.png');
+}
+div.s3{
+  background-image:url('../images/mini_cap.png');
+}
+div.s4{
+  background-image:url('../images/mini_bag.png');
+}
+div.s5{
+  background-image:url('../images/mini_mousepad.png');
+}
+div.s6{
+  background-image:url('../images/mini_phonecase.png');
+}
+div.s7{
+  background-image:url('../images/mini_mug.png');
+}
+div.s8{
+  background-image:url('../images/mini_poster.png');
+}
+div.s9{
+  background-image:url('../images/mini_underglass.png');
+}
 /* FOOTER */
 
 footer{
