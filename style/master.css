@@ -17,7 +17,7 @@ body{
 
 .separator{
   width: 100%;
-  height: 4px;
+  height: 2px;
   background: #F7F1E3;
 }
 
@@ -442,7 +442,81 @@ svg {
 
 /* MERCHANDISING SECTION */
 
+.merchSection{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background: url(../images/spaceshipsBackground.jpg);
+}
 
+.merchSection .merchPreview{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.merchSection .merchPreview .merchCircle{
+  height: 45vh;
+  animation: rotate 8s linear infinite;
+}
+
+.merchSection .merchPreview p{
+  position: absolute;
+  font-size: 96px;
+  text-transform: uppercase;
+  font-family: 'Gugi', sans-serif;
+  color: #F7F1E3;
+  transition: ease 0.5s;
+}
+
+.merchSection .merchPreview:hover p{
+  cursor: default;
+  font-size: 98px;
+}
+
+.merchSection .merchPreview .merchWearFront{
+  position: absolute;
+  margin-left: 100px;
+  height: 36vh;
+  width: 16vw;
+  transition: ease 0.5s;
+}
+
+.merchSection .merchPreview .merchWearFront img{
+  height: 36vh;
+  width: 16vw;
+}
+
+.merchSection .merchPreview .merchWearBack{
+  position: absolute;
+  margin-right: 150px;
+  height: 36vh;
+  width: 16vw;
+  transition: ease 0.5s;
+}
+
+.merchSection .merchPreview .merchWearBack img{
+  height: 36vh;
+  width: 16vw;
+}
+
+.merchSection .merchPreview:hover .merchWearFront{
+  margin-right: 150px;
+  margin-left: 0;
+  z-index: 2;
+}
+
+.merchSection .merchPreview:hover .merchWearBack{
+  margin-left: 150px;
+  margin-right: 0;
+}
+
+.merchSection .merchPreview:hover .soon{
+  z-index: 3;
+}
 
 /*FOOTER*/
 
