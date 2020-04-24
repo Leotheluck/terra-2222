@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TERRA 2222 | LE JEU</title>
+    <meta name="description" content="Découvrez TERRA 2222 ! Un Shoot 'em Up à dans un univers galactique unique et complet !">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="./img/terra2222_favicon.ico" />
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="game-over">
+      <div class="game-over-header">
+        <button class="close-game-over">&#10006;</button>
+        <h3 class="game-over-title">Game over !</h3>
+        <h2 class="coins-total">0</h2>
+      </div>
+      <div class="game-over-main">
+        <div class="game-over-wiki-container">
+          <div class="game-over-wiki"></div>
+        </div>
+        <div class="game-over-results">
+          <h2 class="game-over-score">Score : 0</h2>
+          <h2 class="end-coins">+ 0</h2>
+          <h2 class="game-over-best">Meilleur score : 0</h2>
+        </div>
+        <div class="game-over-buttons">
+          <button class="game-over-backhome">Accueil</button>
+          <button class="shop-button">Boutique</button>
+          <button class="play-again">Rejouer</button>
+        </div>
+      </div>
+      <div class="game-over-footer">
+        <h2 class="game-over-footer-title">TERRA2222</h2>
+      </div>
+    </div>
+
+    <div class="game-start">
+      <div class="game-start-header">
+        <button class="close-game-start">&#10006;</button>
+        <h3 class="game-start-title">initialisation</h3>
+        <h2 class="start-coins-total">0</h2>
+      </div>
+      <div class="game-start-main">
+        <div class="game-start-wiki-container">
+          <div class="game-start-wiki"></div>
+        </div>
+        <div class="game-start-results">
+          <p class="game-start-message">Bonjour, jeune pilote stellaire d'élite ! Les Forces Terriennes de Protection ont besoin de vous pour protéger l'humanité et assurer la paix face à la menace Zblorg révolutionnaire. Êtes-vous prêt à enclencher vos réacteurs ?</p>
+        </div>
+        <div class="game-start-buttons">
+          <button class="game-start-backhome">Accueil</button>
+          <button class="start-shop-button">Boutique</button>
+          <button class="play-start">Jouer</button>
+        </div>
+      </div>
+      <div class="game-start-footer">
+        <h2 class="game-start-footer-title">TERRA2222</h2>
+      </div>
+    </div>
+
+    <div class="shop">
+      <div class="shop-header">
+        <button class="close-shop">&#10006;</button>
+        <h3 class="shop-title">boutique</h3>
+        <h2 class="shop-total-coins">0</h2>
+      </div>
+      <div class="shop-main">
+        <div class="article">
+          <div class="article-picture">
+            <img src="./img/article-1.png" alt="Article 1" title="Article 1 : Vaisseau de Carlos Martinez">
+          </div>
+          <h3 class="article-title">F95X Sky-Force</h3>
+          <p class="article-description">Le vaisseau de Carlos Martinez, parfait pour un début !</p>
+          <div class="article-buy article-1-buydiv">
+            <h2 class="article-price">5</h2>
+            <button class="article-buy-button article-1-buy">Acheter</button>
+          </div>
+          <div class="article-1-bought article-bought">
+            <h2 class="article-bought-price">5</h2>
+            <button class="article-equip-button article-1-equip">Equiper</button>
+          </div>
+          <div class="article-1-actual article-actual active">
+            <h2 class="article-actual-price">5</h2>
+            <button class="article-actual-button article-1-actualb">Actuel</button>
+          </div>
+        </div>
+        <div class="article">
+          <div class="article-picture">
+            <img src="./img/article-2.png" alt="Article 2" title="Article 2 : Vaisseau de Kate Fischer">
+          </div>
+          <h3 class="article-title">VH-10X Space-Liner</h3>
+          <p class="article-description">Robuste et élégant, c'est le vaisseau Kate Fischer !</p>
+          <div class="article-buy article-2-buydiv active">
+            <h2 class="article-price">35</h2>
+            <button class="article-buy-button article-2-buy">Acheter</button>
+          </div>
+          <div class="article-2-bought article-bought">
+            <h2 class="article-bought-price">35</h2>
+            <button class="article-equip-button article-2-equip">Equiper</button>
+          </div>
+          <div class="article-2-actual article-actual">
+            <h2 class="article-actual-price">35</h2>
+            <button class="article-actual-button article-2-actualb">Actuel</button>
+          </div>
+        </div>
+        <div class="article">
+          <div class="article-picture">
+            <img src="./img/article-3.png" alt="Article 3" title="Article 3 : Vaisseau de George Williamson">
+          </div>
+          <h3 class="article-title">FRX-100 Yukizake</h3>
+          <p class="article-description">Le vaisseau de George Williamson, fin & puissant.</p>
+          <div class="article-buy article-3-buydiv active">
+            <h2 class="article-price">85</h2>
+            <button class="article-buy-button article-3-buy">Acheter</button>
+          </div>
+          <div class="article-3-bought article-bought">
+            <h2 class="article-bought-price">85</h2>
+            <button class="article-equip-button article-3-equip">Equiper</button>
+          </div>
+          <div class="article-3-actual article-actual">
+            <h2 class="article-actual-price">85</h2>
+            <button class="article-actual-button article-3-actualb">Actuel</button>
+          </div>
+        </div>
+        <div class="article">
+          <div class="article-picture">
+            <img src="./img/article-4.png" alt="Article 4" title="Article 4 : Cruiser 45BHX-TT">
+          </div>
+          <h3 class="article-title">Cruiser 45BHX-TT</h3>
+          <p class="article-description">Prenez le contrôle d'une impressionnante frégate.</p>
+          <div class="article-buy article-4-buydiv active">
+            <h2 class="article-price">350</h2>
+            <button class="article-buy-button article-4-buy">Acheter</button>
+          </div>
+          <div class="article-4-bought article-bought">
+            <h2 class="article-bought-price">350</h2>
+            <button class="article-equip-button article-4-equip">Equiper</button>
+          </div>
+          <div class="article-4-actual article-actual">
+            <h2 class="article-actual-price">350</h2>
+            <button class="article-actual-button article-4-actualb">Actuel</button>
+          </div>
+        </div>
+        <div class="article">
+          <div class="article-picture">
+            <img src="./img/article-5.png" alt="Article 5" title="Article 5 : Canon rapide">
+          </div>
+          <h3 class="article-title">Canon rapide</h3>
+          <p class="article-description">Fréquence de tir augmentée de 25%.</p>
+          <div class="article-buy article-5-buydiv active">
+            <h2 class="article-price">60</h2>
+            <button class="article-buy-button article-5-buy">Acheter</button>
+          </div>
+          <div class="article-5-bought article-bought">
+            <h2 class="article-bought-price">60</h2>
+            <button class="article-equip-button article-5-equip">Equiper</button>
+          </div>
+          <div class="article-5-actual article-actual">
+            <h2 class="article-actual-price">60</h2>
+            <button class="article-actual-button article-5-actualb">Actuel</button>
+          </div>
+        </div>
+        <div class="article">
+          <div class="article-picture">
+            <img src="./img/article-6.png" alt="Article 6" title="Article 6 : Canons 5TH-Z">
+          </div>
+          <h3 class="article-title">Canons 5TH-Z</h3>
+          <p class="article-description">Tir amélioré, tire dans 5 directions en maintenant "X".</p>
+          <div class="article-buy article-6-buydiv active">
+            <h2 class="article-price">155</h2>
+            <button class="article-buy-button article-6-buy">Acheter</button>
+          </div>
+          <div class="article-6-bought article-bought">
+            <h2 class="article-bought-price">155</h2>
+            <button class="article-equip-button article-6-equip">Equiper</button>
+          </div>
+          <div class="article-6-actual article-actual">
+            <h2 class="article-actual-price">155</h2>
+            <button class="article-actual-button article-6-actualb">Actuel</button>
+          </div>
+        </div>
+        <div class="article">
+          <div class="article-picture">
+            <img src="./img/article-7.png" alt="Article 7" title="Article 7 : Munition 01-ABX">
+          </div>
+          <h3 class="article-title">Munition 01-ABX</h3>
+          <p class="article-description">La munition classique de tous les avions actuels !</p>
+          <div class="article-buy article-7-buydiv">
+            <h2 class="article-price">5</h2>
+            <button class="article-buy-button article-7-buy">Acheter</button>
+          </div>
+          <div class="article-7-bought article-bought">
+            <h2 class="article-bought-price">5</h2>
+            <button class="article-equip-button article-7-equip">Equiper</button>
+          </div>
+          <div class="article-7-actual article-actual active">
+            <h2 class="article-actual-price">5</h2>
+            <button class="article-actual-button article-7-actualb">Actuel</button>
+          </div>
+        </div>
+        <div class="article">
+          <div class="article-picture">
+            <img src="./img/article-8.png" alt="Article 8" title="Article 8 : Munition 72-TRT (RGB)">
+          </div>
+          <h3 class="article-title">Munition 72-TRT (RGB)</h3>
+          <p class="article-description">Une munition spéciale délivrée aux grands pilotes.</p>
+          <div class="article-buy article-8-buydiv active">
+            <h2 class="article-price">880</h2>
+            <button class="article-buy-button article-8-buy">Acheter</button>
+          </div>
+          <div class="article-8-bought article-bought">
+            <h2 class="article-bought-price">880</h2>
+            <button class="article-equip-button article-8-equip">Equiper</button>
+          </div>
+          <div class="article-8-actual article-actual">
+            <h2 class="article-actual-price">880</h2>
+            <button class="article-actual-button article-8-actualb">Actuel</button>
+          </div>
+        </div>
+      </div>
+      <div class="shop-footer">
+        <h2 class="shop-footer-title">TERRA2222</h2>
+      </div>
+    </div>
+
+    <div class="wiki">
+      <div class="wiki-header">
+        <button class="close-wiki">&#10006;</button>
+        <h3 class="wiki-title">Guide</h3>
+        <h2 class="wiki-total-coins">0</h2>
+      </div>
+      <div class="wiki-main">
+        <div class="wiki-commands">
+          <h2 class="wiki-commands-title">Commandes</h2>
+          <div class="wiki-commands-left">
+            <p>Z</p>
+            <p>Q</p>
+            <p>S</p>
+            <p>D</p>
+            <p class="shift-command">Espace</p>
+            <p>X</p>
+            <p>&#8593;</p>
+            <p>&#8592;</p>
+            <p>&#8595;</p>
+            <p>&#8594;</p>
+            <p class="shift-command">Shift + Q</p>
+            <p class="shift-command">Shift + D</p>
+            <p>R</p>
+            <p>E</p>
+            <p class="shift-command">Echap</p>
+            <p class="shift-command">Entrée</p>
+          </div>
+          <div class="wiki-commands-right">
+            <p>Avancer</p>
+            <p>Aller à gauche</p>
+            <p>Reculer</p>
+            <p>Aller à droite</p>
+            <p>Tir unique (Recharge : 100ms)</p>
+            <p>Tir triple (Recharge : 500ms)</p>
+            <p>Avancer</p>
+            <p>Aller à gauche</p>
+            <p>Reculer</p>
+            <p>Aller à droite</p>
+            <p>Aller à gauche (rapidement)</p>
+            <p>Aller à droite (rapidement)</p>
+            <p>Accélérer la cadence</p>
+            <p>Ralentir la cadence</p>
+            <p>Annuler la partie</p>
+            <p>Lancer la partie (depuis un menu)</p>
+          </div>
+        </div>
+        <h2 class="wiki-commands-title">Ennemis</h2>
+        <div class="wiki-article">
+          <div class="wiki-article-picture">
+            <img src="./img/valkyrie-wiki.png" alt="Valkyrie" title="Descriptif : Valkyrie">
+          </div>
+          <h3 class="wiki-article-title">Valkyrie</h3>
+          <p class="wiki-article-description">Le vaisseau le plus commun chez les Zblorg. Il possède un bouclier médiocre et un faible armement mais peut se révéler dangereux si en grand nombre.</p>
+        </div>
+        <div class="wiki-article">
+          <div class="wiki-article-picture">
+            <img src="./img/bricade-wiki.png" alt="Bricade" title="Descriptif : Bricade">
+          </div>
+          <h3 class="wiki-article-title">Bricade</h3>
+          <p class="wiki-article-description">Transporteur de troupes Zblorg. Ils sont assez résistants mais les détruire servira grandement la cause et permettra de soulager nos troupes au sol.</p>
+        </div>
+        <div class="wiki-article">
+          <div class="wiki-article-picture">
+            <img src="./img/banshee-wiki.png" alt="Banshee" title="Descriptif : Banshee">
+          </div>
+          <h3 class="wiki-article-title">Banshee</h3>
+          <p class="wiki-article-description">Le vaisseau le plus poussé des Zblorgs. Ses canons améliorés en font un redoutable adversaire. De plus ils sont pilotés par l'élite des pilotes Zblorgs.</p>
+        </div>
+        <div class="wiki-article">
+          <div class="wiki-article-picture">
+            <img src="./img/boss-wiki.png" alt="Space Destroyer" title="Descriptif : Space Destroyer">
+          </div>
+          <h3 class="wiki-article-title">Space Destroyer</h3>
+          <p class="wiki-article-description">Un destroyer interstellaire Zblorg. Contient à son bord les commandants de l'ennemi. Attention à son immense puissance de feu et son épais blindage.</p>
+        </div>
+
+        <h2 class="wiki-commands-title">Vaisseaux</h2>
+
+        <div class="wiki-article">
+          <div class="wiki-article-picture">
+            <img src="./img/article-1.png" alt="F95X Sky-Force" title="Descriptif : F95X Sky-Force">
+          </div>
+          <h3 class="wiki-article-title">F95X Sky-Force</h3>
+          <p class="wiki-article-description">C'est le vaisseau le plus commun de notre univers, mais il fait son travail, aidé par son aérodynamisme. C'est aussi le vaisseau de Carlos Martinez.</p>
+        </div>
+        <div class="wiki-article">
+          <div class="wiki-article-picture">
+            <img src="./img/article-2.png" alt="VH-10X Space-Liner" title="Descriptif : VH-10X Space-Liner">
+          </div>
+          <h3 class="wiki-article-title">VH-10X Space-Liner</h3>
+          <p class="wiki-article-description">Bien plus furtif que les F95X, le VH-10X opte pour un design discret et des munitions noires. C'est aussi le vaisseau de Kate Fischer.</p>
+        </div>
+        <div class="wiki-article">
+          <div class="wiki-article-picture">
+            <img src="./img/article-3.png" alt="FRX-100 Yukizake" title="Descriptif : FRX-100 Yukizake">
+          </div>
+          <h3 class="wiki-article-title">FRX-100 Yukizake</h3>
+          <p class="wiki-article-description">Notre vaisseau le plus poussé à ce jour. Equipé des dernières technologies de l'Empire, il est surpuissant. C'est aussi le vaisseau de George Williamson.</p>
+        </div>
+        <div class="wiki-article">
+          <div class="wiki-article-picture">
+            <img src="./img/article-4.png" alt="Cruiser 45BHX-TT" title="Descriptif : Cruiser 45BHX-TT">
+          </div>
+          <h3 class="wiki-article-title">Cruiser 45BHX-TT</h3>
+          <p class="wiki-article-description">Destroyer interstellaire utilisé dans les deux camps, la frégate "Cruiser 45BHX-TT" affiche un corps métallique robuste prêt à se frotter à l'action !</p>
+        </div>
+
+        <h2 class="wiki-commands-title">Canons</h2>
+
+        <div class="wiki-article">
+          <div class="wiki-article-picture">
+            <img src="./img/article-5.png" alt="Canon rapide" title="Descriptif : Canon rapide">
+          </div>
+          <h3 class="wiki-article-title">Canon rapide</h3>
+          <p class="wiki-article-description">Sortie tout droit de nos laboratoires, la nouvelle amélioration "Canon rapide" disponible en boutique augmente votre fréquence de tir de 25%.</p>
+        </div>
+        <div class="wiki-article">
+          <div class="wiki-article-picture">
+            <img src="./img/article-6.png" alt="Canons 5TH-Z" title="Descriptif : Canons 5TH-Z">
+          </div>
+          <h3 class="wiki-article-title">Canons 5TH-Z</h3>
+          <p class="wiki-article-description">Les nouveaux canons 5TH-Z sont surpuissants, ils vous permettent de tirer dans 5 directions à la fois, rendant votre vaisseau imbattable si combiné avec le canon rapide.</p>
+        </div>
+
+        <h2 class="wiki-commands-title">Munitions</h2>
+
+        <div class="wiki-article">
+          <div class="wiki-article-picture">
+            <img src="./img/article-7.png" alt="Munition 01-ABX" title="Descriptif : Munition 01-ABX">
+          </div>
+          <h3 class="wiki-article-title">Munition 01-ABX</h3>
+          <p class="wiki-article-description">Une munition bien classique mais qui a fait ses preuves, sa couleur varie selon le vaisseau qui l'arbore.</p>
+        </div>
+        <div class="wiki-article">
+          <div class="wiki-article-picture">
+            <img src="./img/article-8.png" alt="Munition 72-TRT (RGB)" title="Munition 72-TRT (RGB)">
+          </div>
+          <h3 class="wiki-article-title">Munition 72-TRT (RGB)</h3>
+          <p class="wiki-article-description">Fierté des scientifiques, la nouvelle munition 72-TRT (RGB) porte les couleurs de l'arc-en-ciel en continu.</p>
+        </div>
+      </div>
+      <div class="wiki-footer">
+        <h2 class="wiki-footer-title">TERRA2222</h2>
+      </div>
+    </div>
+
+    <div class="error">
+      <div class="error-header">
+        <button class="close-error">&#10006;</button>
+        <h3 class="error-title">erreur</h3>
+        <h2 class="error-total-coins">0</h2>
+      </div>
+      <div class="error-main">
+        <h2 class="error-text">Erreur : Vous n'avez pas assez d'argent pour acheter cet article.</h2>
+      </div>
+      <div class="error-footer">
+        <h2 class="error-footer-title">TERRA2222</h2>
+      </div>
+    </div>
+
+    <div class="warning">
+      <div class="warning-header">
+        <button class="close-warning">&#10006;</button>
+        <h3 class="warning-title">attention</h3>
+        <h2 class="warning-total-coins">0</h2>
+      </div>
+      <div class="warning-main">
+        <h2 class="warning-text">Si vous quittez cette page, votre sauvegarde sera détruite et vos pièces réinitialisées. Pour confirmer, <a class="warning-text-link" href="./index.html">cliquer ici</a></h2>
+      </div>
+      <div class="warning-footer">
+        <h2 class="warning-footer-title">TERRA2222</h2>
+      </div>
+    </div>
+
+    <div class="warning">
+      <div class="warning-header">
+        <button class="close-warning">&#10006;</button>
+        <h3 class="warning-title">attention</h3>
+        <h2 class="warning-total-coins">0</h2>
+      </div>
+      <div class="warning-main">
+        <h2 class="warning-text">Si vous quittez cette page, votre sauvegarde sera détruite et vos pièces réinitialisées. Pour confirmer, <a href="#">cliquer ici</a></h2>
+      </div>
+      <div class="warning-footer">
+        <h2 class="warning-footer-title">TERRA2222</h2>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="score"></div>
+      <div class="boss-bar">
+        <div class="boss-bar-life"></div>
+        <h2 class="boss-bar-stats"> <span class="boss-bar-remaining">N/A</span>/<span class="boss-bar-full">N/A</span></h2>
+      </div>
+      <button class="sound-button"></button>
+    </div>
+
+    <div class="loader-container">
+      <svg width="200" height="200" viewBox="0 0 100 100">
+        <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+        <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+        <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+        <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+      </svg>
+    </div>
+
+    <script>
+      window.addEventListener("load", function(event) {
+        console.log("Toutes les ressources ont été chargées !")
+        const loader = document.querySelector('.loader-container').style
+        loader.opacity = 1;
+        (function fade(){(loader.opacity-=.1)<0?loader.display="none":setTimeout(fade,40)})();
+      })
+    </script>
+
+    <canvas class="canvas"></canvas>
+
+    <script type="text/javascript" src="js/resources.js"></script>
+    <script type="text/javascript" src="js/input.js"></script>
+    <script type="text/javascript" src="js/sprite.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+  </body>
+</html>

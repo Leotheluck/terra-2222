@@ -1,0 +1,1419 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #151515;
+}
+
+.canvas {
+    display: block;
+    margin: auto;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.wrapper {
+    width: 100vw;
+    margin: 0 auto;
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.score {
+    position: fixed;
+    margin: 0 auto;
+    font-family: "Gugi", sans-serif;
+    font-weight: bold;
+    z-index: 2;
+    color: white;
+    font-size: 2em;
+}
+
+.boss-bar
+{
+    position: fixed;
+    margin: 0 auto;
+    font-weight: bold;
+    z-index: 2;
+    background: #0c031e;
+    height: 2vh;
+    border-radius: 30px;
+    width: 70vw;
+    margin-top: 6vh;
+    border: 7px #232874 solid;
+    overflow: hidden;
+    display: none;
+}
+
+.boss-bar-life
+{
+    width: 100%;
+    height: 2vh;
+    background: linear-gradient(#43cea2, #185a9d);
+}
+
+.boss-bar-stats
+{
+    color: #FFFFFF;
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 2px;
+    font-size: 12px;
+    font-family: "Gugi", sans-serif;
+    opacity: 70%;
+}
+
+.end-shop
+{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.shop
+{
+    width: 60vw;
+    height: 60vh;
+    border-radius: 40px;
+    background: #20205750;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+}
+
+.shop-header
+{
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    background: #20205770;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.close-shop
+{
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 50px;
+    transition: .3s;
+}
+
+.close-shop:hover
+{
+    cursor: pointer;
+    color: #ececec;
+    font-size: 48px;
+}
+
+.shop-title
+{
+    text-transform: uppercase;
+    font-family: "Gugi", sans-serif;
+    font-size: 30px;
+    margin: 0;
+    color: white
+}
+
+.shop-total-coins
+{
+    background-image: url(../img/coin-flat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: right;
+    padding-right: 50px;
+    font-size: 30px;
+    font-family: "Gugi", sans-serif;
+    color: #FFFFFF;
+}
+
+.shop-total-coins:hover
+{
+    background-image: url(../img/coin-turned.png);
+}
+
+.shop-main
+{
+    height: 42vh;
+    background: #1b0b3f80;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    overflow: scroll;
+}
+
+.article
+{
+    width: 220px;
+    height: 220px;
+    background-color: #908bff60;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.article-picture
+{
+    width: 220px;
+    height: 130px;
+    overflow: hidden;
+    background: #ff727260;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.article-title
+{
+    margin: 0;
+    margin-top: 5px;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family: "Gugi", sans-serif;
+    text-align: center;
+}
+
+.article-description
+{
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 2px;
+    font-size: 14px;
+    color: #c4c1ff;
+    padding: 0 10px 0 10px;
+}
+
+.article-buy
+{
+    display: none;
+    justify-content: flex-end;
+}
+
+.article-bought, .article-actual
+{
+    display: none;
+    justify-content: flex-end;
+}
+
+.article-price
+{
+    background-image: url(../img/coin-flat.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 35px;
+    margin: 0;
+    margin-right: 10px;
+    font-family: "Gugi", sans-serif;
+    color: #FFFFFF;
+}
+
+.article-bought-price, .article-actual-price{
+    background-image: url(../img/coin-flat.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 35px;
+    margin: 0;
+    margin-right: 10px;
+    font-family: "Gugi", sans-serif;
+    color: #FFFFFF;
+    opacity: .4;
+    text-decoration: line-through;
+}
+
+.article-price:hover
+{
+    background-image: url(../img/coin-turned.png);
+}
+
+.article-bought-price:hover, .article-actual-price:hover
+{
+    background-image: url(../img/coin-turned.png);
+}
+
+.article-buy-button
+{
+    margin: 0;
+    margin-right: 2px;
+    background: none;
+    border-radius: 20px;
+    border: #FFFFFF 2px solid;
+    outline: none;
+    color: #FFFFFF;
+    font-family: "Gugi", sans-serif;
+    padding: 5px 10px 5px 10px;
+    transition: .3s;
+}
+
+.article-equip-button, .article-actual-button
+{
+    margin: 0;
+    margin-right: 2px;
+    background: none;
+    border-radius: 20px;
+    border: #FFFFFF 2px solid;
+    outline: none;
+    color: #FFFFFF;
+    font-family: "Gugi", sans-serif;
+    padding: 5px 10px 5px 10px;
+    transition: .3s;
+}
+
+.article-buy-button:hover
+{
+    cursor: pointer;
+    background: #FFFFFF20;
+}
+
+.article-equip-button:hover
+{
+    cursor: pointer;
+    background: #FFFFFF20;
+}
+
+.article-actual-button
+{
+    background: #51d04850;
+}
+
+.article-actual-button:hover
+{
+    background: #51d04880;
+}
+
+.active
+{
+    display: flex;
+}
+
+/**** 
+ SHOP FOOTER
+****/
+
+.shop-footer
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 8vh;
+}
+
+.shop-footer-title
+{
+    color: white;
+    margin: 0;
+    padding: 20px 40px 20px 40px;
+    font-family: "Gugi", sans-serif;
+    letter-spacing: 4px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    background: #20205770;
+}
+
+.error
+{
+    width: 55vw;
+    height: 20vh;
+    border-radius: 40px;
+    background: #57202490;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    overflow: hidden;
+}
+
+.error-header
+{
+    height: 5vh;
+    background: #57202480;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.close-error
+{
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 40px;
+    transition: .3s;
+}
+
+.close-error:hover
+{
+    cursor: pointer;
+    color: #ececec;
+    font-size: 38px;
+}
+
+.error-title
+{
+    text-transform: uppercase;
+    font-family: "Gugi", sans-serif;
+    font-size: 26px;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.error-total-coins
+{
+    background-image: url(../img/coin-flat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: right;
+    padding-right: 40px;
+    font-size: 26px;
+    font-family: "Gugi", sans-serif;
+    color: #FFFFFF;
+}
+
+.error-total-coins:hover
+{
+    background-image: url(../img/coin-turned.png);
+}
+
+.error-main
+{
+    width: 60vw;
+    height: 10vh;
+    background: #ff525e80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-text
+{
+    color: #FFFFFF;
+    font-family: "Gugi", sans-serif;
+    margin: 0;
+}
+
+.error-footer
+{
+    width: 55vw;
+    height: 5vh;
+    background: #57202480;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.error-footer-title
+{
+    color: #FFFFFF;
+    margin: 0;
+    padding: 10px 40px 10px 40px;
+    font-family: "Gugi", sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    background: #2e0b0e70;
+}
+
+.game-over
+{
+    width: 50vw;
+    height: 60vh;
+    border-radius: 40px;
+    background: #20205750;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    overflow: hidden;
+}
+
+.game-over-header
+{
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    background: #20205770;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.close-game-over
+{
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 50px;
+    transition: .3s;
+    width: 150px;
+    text-align: left;
+}
+
+.close-game-over:hover
+{
+    cursor: pointer;
+    color: #ececec;
+    font-size: 48px;
+}
+
+.game-over-title
+{
+    text-transform: uppercase;
+    font-family: "Gugi", sans-serif;
+    font-size: 30px;
+    margin: 0;
+    color: white
+}
+
+.coins-total
+{
+    background-image: url(../img/coin-flat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: right;
+    padding-right: 50px;
+    font-size: 30px;
+    font-family: "Gugi", sans-serif;
+    color: #FFFFFF;
+    width: 120px;
+}
+
+.coins-total:hover
+{
+    background-image: url(../img/coin-turned.png);
+}
+
+.game-over-main
+{
+    height: 42vh;
+    background: #1b0b3f80;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    overflow: scroll;
+}
+
+.game-over-wiki-container
+{
+    width: 50vw;
+    background: none;
+    height: 8vh;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.game-over-wiki
+{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    margin-right: 20px;
+    background-image: url(../img/question-mark.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity .3s ease;
+}
+
+.game-over-wiki:hover
+{
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.game-over-results
+{
+    width: 50vw;
+    height: 22vh;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+}
+
+.game-over-score
+{
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 40px;
+    padding: 20px 40px 20px 40px;
+    font-family: "Gugi", sans-serif;
+    letter-spacing: 4px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    background: #aad4ff50;
+}
+
+.end-coins
+{
+    background-image: url(../img/coin-flat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: right;
+    padding-right: 50px;
+    font-size: 30px;
+    margin: 0;
+    margin-top: 10px;
+    font-family: "Gugi", sans-serif;
+    color: #FFFFFF;
+}
+
+.end-coins:hover
+{
+    background-image: url(../img/coin-turned.png);
+}
+
+.game-over-best
+{
+    color: #FFFFFF;
+    margin: 0;
+    font-family: "Gugi", sans-serif;
+    font-size: 24px;
+}
+
+.game-over-buttons
+{
+    width: 400px;
+    height: 14vh;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.game-over-backhome, .shop-button
+{
+    width: 150px;
+    margin: 10px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    background: #FFFFFF;
+    color: #1b0b3f;
+    font-family: "Gugi", sans-serif;
+    height: 60px;
+    transition: ease .2s;
+}
+
+.game-over-backhome:hover
+{
+    cursor: pointer;
+    background: #dbdbdb;
+}
+
+.shop-button
+{
+    background: #ffc425;
+    color: #1b0b3f;
+}
+
+.shop-button:hover
+{
+    cursor: pointer;
+    background: #f1962b;
+}
+
+.play-again
+{
+    width: 320px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 24px;
+    background: none;
+    color: #FFFFFF;
+    border: 5px #FFFFFF solid;
+    font-family: "Gugi", sans-serif;
+    height: 60px;
+    transition: ease .2s;
+}
+
+.play-again:hover
+{
+    background: #FFFFFF30;
+    cursor: pointer;
+}
+
+.game-over-footer
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 8vh;
+}
+
+.game-over-footer-title
+{
+    color: #FFFFFF;
+    margin: 0;
+    padding: 20px 40px 20px 40px;
+    font-family: "Gugi", sans-serif;
+    letter-spacing: 4px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    background: #20205770;
+}
+
+.game-start
+{
+    width: 50vw;
+    height: 60vh;
+    border-radius: 40px;
+    background: #20205750;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    overflow: hidden;
+}
+
+.game-start-header
+{
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    background: #20205770;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.close-game-start
+{
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 50px;
+    transition: .3s;
+    width: 150px;
+    text-align: left;
+}
+
+.close-game-start:hover
+{
+    cursor: pointer;
+    color: #ececec;
+    font-size: 48px;
+}
+
+.game-start-title
+{
+    text-transform: uppercase;
+    font-family: "Gugi", sans-serif;
+    font-size: 30px;
+    margin: 0;
+    color: white
+}
+
+.start-coins-total
+{
+    background-image: url(../img/coin-flat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: right;
+    padding-right: 50px;
+    font-size: 30px;
+    font-family: "Gugi", sans-serif;
+    color: #FFFFFF;
+    width: 120px;
+}
+
+.start-coins-total:hover
+{
+    background-image: url(../img/coin-turned.png);
+}
+
+.game-start-main
+{
+    height: 42vh;
+    background: #1b0b3f80;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    overflow: scroll;
+}
+
+.game-start-wiki-container
+{
+    width: 50vw;
+    background: none;
+    height: 8vh;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.game-start-wiki
+{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    margin-right: 20px;
+    background-image: url(../img/question-mark.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity .3s ease;
+}
+
+.game-start-wiki:hover
+{
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.game-start-results
+{
+    width: 50vw;
+    height: 21vh;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+}
+
+.game-start-message
+{
+    width: 20vw;
+    background: #20205770;
+    padding: 10px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-family: "Gugi", sans-serif;
+    border-bottom: 10px #FFFFFF50 solid;
+    animation: messageStart 2s ease-in-out infinite;
+}
+
+@keyframes messageStart
+{
+    0%{
+        background: #20205770;
+        border-bottom: 10px #FFFFFF30 solid;
+    }
+    50%{
+        background: #20205720;
+        border-bottom: 10px #FFFFFF10 solid;
+    }
+    100%{
+        background: #20205770;
+        border-bottom: 10px #FFFFFF30 solid;
+    }
+}
+
+.game-start-buttons
+{
+    width: 400px;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.game-start-backhome, .start-shop-button
+{
+    width: 150px;
+    margin: 10px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    background: #FFFFFF;
+    color: #1b0b3f;
+    font-family: "Gugi", sans-serif;
+    height: 60px;
+    transition: ease .2s;
+}
+
+.game-start-backhome:hover
+{
+    cursor: pointer;
+    background: #dbdbdb;
+}
+
+.start-shop-button
+{
+    background: #ffc425;
+    color: #1b0b3f;
+}
+
+.start-shop-button:hover
+{
+    cursor: pointer;
+    background: #f1962b;
+}
+
+.play-start
+{
+    width: 320px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 24px;
+    background: none;
+    color: #FFFFFF;
+    border: 5px #FFFFFF solid;
+    font-family: "Gugi", sans-serif;
+    height: 60px;
+    transition: ease .2s;
+}
+
+.play-start:hover
+{
+    background: #FFFFFF30;
+    cursor: pointer;
+}
+
+.game-start-footer
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 8vh;
+}
+
+.game-start-footer-title
+{
+    color: #FFFFFF;
+    margin: 0;
+    padding: 20px 40px 20px 40px;
+    font-family: "Gugi", sans-serif;
+    letter-spacing: 4px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    background: #20205770;
+}
+
+.loader-container
+{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 99;
+    background: #FFFFFF;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+            transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+  
+.stroke-still {
+    stroke: #232323;
+}
+  
+.stroke-animation {
+    -webkit-animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+            animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+}
+  
+@-webkit-keyframes stroke-spacing {
+    0% {
+        stroke-dasharray: 0 200;
+    }
+    45% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200 200;
+    }
+    90% {
+        stroke-dashoffset: -200;
+        stroke-dasharray: 200 200;
+    }
+    100% {
+        stroke-dashoffset: -200;
+        stroke-dasharray: 200 200;
+    }
+}
+  
+@keyframes stroke-spacing {
+    0% {
+        stroke-dasharray: 0 200;
+    }
+    45% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200 200;
+    }
+    90% {
+        stroke-dashoffset: -200;
+        stroke-dasharray: 200 200;
+    }
+    100% {
+        stroke-dashoffset: -200;
+        stroke-dasharray: 200 200;
+    }
+}
+  
+@-webkit-keyframes stroke-color {
+    0%  { stroke: #3498DB; }
+    24% { stroke: #643232; }
+    25% { stroke: #327864; }
+    49% { stroke: #327864; }
+    50% { stroke: #32326e; }
+    74% { stroke: #32326e; }
+    75% { stroke: #78325a; }
+    99% { stroke: #78325a; }
+}
+  
+@keyframes stroke-color {
+    0%  { stroke: #3498DB; }
+    24% { stroke: #643232; }
+    25% { stroke: #327864; }
+    49% { stroke: #327864; }
+    50% { stroke: #32326e; }
+    74% { stroke: #32326e; }
+    75% { stroke: #78325a; }
+    99% { stroke: #78325a; }
+}
+  
+.sound-button
+{
+    width: 50px;
+    height: 50px;
+    top: 30px;
+    left: 30px;
+    background: none;
+    background-image: url(../img/sound-on.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    outline: none;
+    border: none;
+    z-index: 5;
+    transition: opacity .2s ease;
+}
+
+.sound-button:hover
+{
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.warning
+{
+    width: 55vw;
+    height: 20vh;
+    border-radius: 40px;
+    background: #57202490;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    overflow: hidden;
+}
+
+.warning-header
+{
+    height: 5vh;
+    background: #57202480;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.close-warning
+{
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 40px;
+    transition: .3s;
+}
+
+.close-warning:hover
+{
+    cursor: pointer;
+    color: #ececec;
+    font-size: 38px;
+}
+
+.warning-title
+{
+    text-transform: uppercase;
+    font-family: "Gugi", sans-serif;
+    font-size: 26px;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.warning-total-coins
+{
+    background-image: url(../img/coin-flat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: right;
+    padding-right: 40px;
+    font-size: 26px;
+    font-family: "Gugi", sans-serif;
+    color: #FFFFFF;
+}
+
+.warning-total-coins:hover
+{
+    background-image: url(../img/coin-turned.png);
+}
+
+.warning-main
+{
+    width: 55vw;
+    height: 10vh;
+    background: #ff525e80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.warning-text
+{
+    color: #FFFFFF;
+    font-family: "Gugi", sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+.warning-text-link
+{
+    color: #630b0b;
+    transition: 0.3s ease;
+}
+
+.warning-text-link:hover
+{
+    color: #811010;
+}
+
+.warning-footer
+{
+    width: 55vw;
+    height: 5vh;
+    background: #57202480;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.warning-footer-title
+{
+    color: #FFFFFF;
+    margin: 0;
+    padding: 10px 40px 10px 40px;
+    font-family: "Gugi", sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    background: #2e0b0e70;
+}
+
+/* WIKI */
+
+.wiki
+{
+    width: 60vw;
+    height: 60vh;
+    border-radius: 40px;
+    background: #20205750;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+}
+
+.wiki-header
+{
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    background: #20205770;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.close-wiki
+{
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 50px;
+    transition: .3s;
+}
+
+.close-wiki:hover
+{
+    cursor: pointer;
+    color: #ececec;
+    font-size: 48px;
+}
+
+.wiki-title
+{
+    text-transform: uppercase;
+    font-family: "Gugi", sans-serif;
+    font-size: 30px;
+    margin: 0;
+    color: white
+}
+
+.wiki-total-coins
+{
+    background-image: url(../img/coin-flat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: right;
+    padding-right: 50px;
+    font-size: 30px;
+    font-family: "Gugi", sans-serif;
+    color: #FFFFFF;
+}
+
+.wiki-total-coins:hover
+{
+    background-image: url(../img/coin-turned.png);
+}
+
+.wiki-main
+{
+    height: 42vh;
+    background: #1b0b3f80;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    overflow: scroll;
+}
+
+.wiki-commands
+{
+    background: none;
+    width: 60vw;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.wiki-commands-title
+{
+    color: #FFFFFF;
+    font-family: "Gugi", sans-serif;
+    margin: 0;
+    width: 45vw;
+    margin-left: 10vw;
+    margin-right: 5vw;
+    margin-top: 8px;
+    border-bottom: 5px #FFFFFF solid;
+}
+
+.wiki-commands-left
+{
+    margin-left: 10vw;
+    width: 15vw;
+    text-align: right;
+}
+
+.wiki-commands-left p
+{
+    font-family: "Gugi", sans-serif;
+    border: 3px solid #FFFFFF;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background: #FFFFFF30;
+    transition: ease .3s;
+    text-align: center;
+}
+
+.wiki-commands-left p:hover
+{
+    background: #FFFFFF60;
+}
+
+p.shift-command
+{
+    width: 150px;
+}
+
+.wiki-commands-right
+{
+    width: 30vw;
+    margin-right: 5vw;
+}
+
+.wiki-commands-right p
+{
+    font-family: "Gugi", sans-serif;
+    height: 40px;
+    padding-top: 4px;
+    font-size: 30px;
+    color: #FFFFFF;
+    border-bottom: dashed 2px #FFFFFF;
+}
+
+.wiki-article
+{
+    width: 220px;
+    height: 250px;
+    background-color: #908bff60;
+    margin: 10px;
+    margin-top: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.wiki-article-picture
+{
+    width: 220px;
+    height: 130px;
+    overflow: hidden;
+    background: #ff727260;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.wiki-article-title
+{
+    margin: 0;
+    margin-top: 5px;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family: "Gugi", sans-serif;
+    text-align: center;
+}
+
+.wiki-article-description
+{
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 2px;
+    font-size: 12px;
+    color: #c4c1ff;
+    padding: 0 10px 5px 10px;
+}
+
+.wiki-footer
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 8vh;
+}
+
+.wiki-footer-title
+{
+    color: white;
+    margin: 0;
+    padding: 20px 40px 20px 40px;
+    font-family: "Gugi", sans-serif;
+    letter-spacing: 4px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    background: #20205770;
+}

@@ -1,0 +1,612 @@
+*{
+  margin: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+.container{ 
+  width:100vw;
+  height:100vh;
+  font-family: 'Gugi', sans-serif;
+  z-index:0;/*Put it in background*/
+}
+
+.separator{
+  width: 100%;
+  height: 2px;
+  background: #F7F1E3;
+}
+
+.btns{
+  z-index: 1; /*it hovers the container so it doesn't disturb it*/
+  width: 100vw;
+  margin:0 auto;
+  text-align: center;
+}
+
+.mainTitle{
+  color:#F7F1E3;
+  font-size: 46px;
+  letter-spacing: 10px;
+  margin: 0;
+  padding-top: 300px;
+  padding-bottom: 80px;
+}
+
+div.linkWrapper{
+  display: flex;
+  align-items: center;
+  width: 12vw;
+  height: 8vh;
+  margin: 0 auto;
+  border: 5px solid #F7F1E3;
+  transition: 0.3s;
+  border-radius: 40px;
+}
+
+div.linkWrapper:hover{
+  background-color:#F7F1E330;
+  cursor:pointer;
+}
+
+div.linkWrapper:active{
+  opacity:0.7;
+}
+
+.play{
+  z-index: 2;
+  width: 10vw;
+  padding: 5px 35px;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #F7F1E3;
+  font-size:32px;
+  padding-bottom: 3px;
+  transition: 1s;
+}
+
+
+div.sound{ /*the div that contains the sound <i> buttons*/
+  padding:30px 0px 0px 30px;
+  position: fixed;
+  z-index:2;
+}
+.fas{
+  color:#F7F1E3;
+}
+i.fa-volume-mute{/*mute button is hidden*/
+  display:block;
+}
+i.fa-volume-up{ /*Volume up button is shown*/
+  display:none;
+}
+.fas:hover{ /*hover for the sound button*/
+  cursor: pointer;
+}
+/*ARROW SECTION*/
+.arrowContainer {
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 90%;
+  left: 50.7%;
+  transform: translate(-50%, -50%) rotateZ(0deg);
+}
+.arrowContainer:hover {
+  cursor: pointer;
+}
+.arrowContainer:hover .arrow {
+  top: 50%;
+}
+.arrowContainer:hover .arrow:before {
+  transform: translate(-50%, -50%) rotateZ(-30deg);
+}
+.arrowContainer:hover .arrow:after {
+  transform: translate(-50%, -50%) rotateZ(30deg);
+}
+.arrow {
+  position: absolute;
+  left: 50%;
+  transition: all 0.4s ease;
+}
+.arrow:before, .arrow:after {
+  transition: all 0.4s ease;
+  content: "";
+  display: block;
+  position: absolute;
+  transform-origin: bottom right;
+  background: #F7F1E3;
+  width: 3px;
+  height: 30px;
+  border-radius: 10px;
+  transform: translate(-50%, -50%) rotateZ(-45deg);
+}
+.arrow:after {
+  transform-origin: bottom left;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+}
+.arrow:nth-child(1) {
+  opacity: 0.3;
+  top: 35%;
+}
+.arrow:nth-child(2) {
+  opacity: 0.6;
+  top: 55%;
+}
+.arrow:nth-child(3) {
+  opacity: 0.9;
+  top: 75%;
+}
+/*END OF ARROW SECTION*/
+
+/*** LORE PRESENTATION SECTION ***/
+
+/* LORE PART BACKGROUND AND GENERAL SETTINGS */
+
+.lorePart{
+  display: flex;
+  flex-direction: row;
+  background: url(../img/spaceshipsBackground.jpg) 100%;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 24px;
+  color: #F7F1E3;
+  height: 100%;
+}
+
+/* Lore part character picker */
+
+.lorePart .characterPickerBackground{
+  width: 60%;
+}
+
+.lorePart .characterPickerBackground .characterPicker{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.lorePart .characterPickerBackground .movingCircle{
+  animation: rotate 8s linear infinite;
+  width: 50%;
+}
+
+@keyframes rotate{
+  0%{
+       transform: rotateZ(0deg)
+  }
+  100%{
+       transform: rotateZ(360deg)
+   }
+}
+
+.lorePart .characterPickerBackground .pilot{
+  height: 600px;
+  position: absolute;
+  left: auto;
+  right: auto;
+}
+
+/* Lore part character picker selectors */
+
+.lorePart .characterPickerBackground .characterSelector{
+  display: flex;
+  justify-content: center;
+}
+
+.lorePart .characterPickerBackground .characterSelector img{
+  width: 80px;
+  border: solid 2px #F7F1E3;
+  margin: 18px 22px;
+  border-radius: 50px;
+}
+
+.lorePart .characterPickerBackground .characterSelector img:hover{
+  border: solid 4px #F7F1E3;
+  margin: 16px 20px;
+  cursor: pointer;
+}
+
+.synopsis{
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.synopsis:hover{
+  cursor: pointer;
+
+}
+
+/* Lore part text section */
+
+.lorePart .characterStory{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  background: #1E272Eb2;
+}
+
+.lorePart .characterStory h3{
+  width: 80%;
+  font-family: 'Gugi', cursive;
+  font-size: 32px;
+  padding-bottom: 24px;
+}
+
+.lorePart .characterStory h3 em{
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.lorePart .characterStory p{
+  width: 80%;
+
+}
+
+/* contributors part images and text */
+
+.contributorPart{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  color: #F7F1E3;
+  background: url(../img/bg_contri.jpg);
+  background-size: cover;
+  margin-top: 0;
+  height: 100vh;
+}
+
+.contributorPart h2{
+  font-family: 'Gugi', cursive;
+  font-size: 64px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  padding-bottom: 15vh;
+  text-align: center;
+}
+
+.contributorsProfiles{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+/* circle */
+
+.profileImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 160px;
+    height: 160px;
+}
+
+.contribuCircle{
+    margin: 0 auto;
+    width: 160px;
+    height: 160px;
+}
+
+.contributImg{
+    position: absolute;
+    left: auto;
+    right: auto;
+    width: 120px;
+    height: 120px;
+    transition: transform .2s;
+    border-radius: 50%;
+}
+
+.contributors{
+    display: flex;
+    flex-direction: column;
+    width: 16%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    /* padding-top: 20vh; */
+}
+
+.contributors:hover .contribuCircle{
+  animation: rotate 8s linear infinite;
+}
+
+/* text */
+
+.name{
+    display: flex;
+    margin-top: 20px;
+    width: 160px;
+    font-size: 32px;
+    transition: transform .2s;
+    text-align: center;
+    justify-content: center;
+}
+
+.textUs{
+    display: flex;
+    margin-top: 10px;
+    width: 160px;
+    height: 180px;
+    transition: transform .2s;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* hover */
+
+.contributImg:hover, .name:hover, .textUs:hover{
+    transform: scale(1.02);
+}
+
+/*LOADER SECTION */
+/*this section is freely inspired from the codePen : https://codepen.io/GeoxCodes/pen/PBoQZa*/
+svg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  z-index: 3;
+}
+
+.stroke-still {
+  stroke: #232323;
+}
+
+.stroke-animation {
+  -webkit-animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+          animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+@-webkit-keyframes stroke-spacing {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+  45% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 200 200;
+  }
+  90% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+  100% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+}
+
+@keyframes stroke-spacing {
+  0% {
+    stroke-dasharray: 0 200;
+  }
+  45% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 200 200;
+  }
+  90% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+  100% {
+    stroke-dashoffset: 200;
+    stroke-dasharray: 200 200;
+  }
+}
+
+@-webkit-keyframes stroke-color {
+  0%  { stroke: #3498DB; }
+  24% { stroke: #643232; }
+  25% { stroke: #327864; }
+  49% { stroke: #327864; }
+  50% { stroke: #1e272e; }
+  74% { stroke: #1e272e; }
+  75% { stroke: #c711aa; }
+  99% { stroke: #c711aa; }
+}
+
+@keyframes stroke-color {
+  0%  { stroke: #3498DB; }
+  24% { stroke: #643232; }
+  25% { stroke: #327864; }
+  49% { stroke: #327864; }
+  50% { stroke: #1e272e; }
+  74% { stroke: #1e272e; }
+  75% { stroke: #c711aa; }
+  99% { stroke: #c711aa; }
+}
+
+/* MERCHANDISING SECTION */
+
+.merchSection{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background: url(../img/spaceshipsBackground.jpg);
+}
+
+.merchSection .merchPreview{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.merchSection .merchPreview .merchCircle{
+  height: 45vh;
+  animation: rotate 8s linear infinite;
+}
+
+.merchSection .merchPreview p{
+  position: absolute;
+  font-size: 96px;
+  text-transform: uppercase;
+  font-family: 'Gugi', sans-serif;
+  color: #F7F1E3;
+  transition: ease 0.5s;
+}
+
+.merchSection .merchPreview:hover p{
+  cursor: default;
+  font-size: 98px;
+}
+
+.merchSection .merchPreview .merchWearFront{
+  position: absolute;
+  margin-left: 100px;
+  height: 36vh;
+  width: 16vw;
+  transition: ease 0.5s;
+}
+
+.merchSection .merchPreview .merchWearFront img{
+  height: 36vh;
+  width: 16vw;
+}
+
+.merchSection .merchPreview .merchWearBack{
+  position: absolute;
+  margin-right: 150px;
+  height: 36vh;
+  width: 16vw;
+  transition: ease 0.5s;
+}
+
+.merchSection .merchPreview .merchWearBack img{
+  height: 36vh;
+  width: 16vw;
+}
+
+.merchSection .merchPreview:hover .merchWearFront{
+  margin-right: 150px;
+  margin-left: 0;
+  z-index: 2;
+}
+
+.merchSection .merchPreview:hover .merchWearBack{
+  margin-left: 150px;
+  margin-right: 0;
+}
+
+.merchSection .merchPreview:hover .soon{
+  z-index: 3;
+}
+
+/*FOOTER*/
+
+footer{
+  background: #1E272E;
+  color: #F7F1E3;
+}
+
+footer a{
+  color: #F7F1E3;
+  text-decoration: none;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 16px;
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+footer .footer1stLine{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+footer img{
+  width: 400px;
+}
+
+footer ul{
+  list-style: none;
+  padding: 0px;
+}
+
+footer li{
+  display: flex;
+  align-items: center;
+  margin: 16px;
+
+}
+
+footer .infos{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+footer .icons{
+  width: 24px;
+  padding-right: 16px;
+}
+
+footer .backquotestudiosLogo{
+  display: flex;
+  align-items: center;
+}
+
+footer .footer2ndLine{
+  color: #F7F1E3;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+}
+
+.sound-button
+{
+    width: 50px;
+    height: 50px;
+    top: 30px;
+    left: 30px;
+    background: none;
+    background-image: url(../img/sound-off.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    outline: none;
+    border: none;
+    z-index: 5;
+    transition: opacity .2s ease;
+}
+
+.sound-button:hover
+{
+    opacity: 70%;
+    cursor: pointer;
+}
